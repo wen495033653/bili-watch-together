@@ -1,5 +1,5 @@
-import { VueLoaderPlugin } from "vue-loader";
-import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import {VueLoaderPlugin} from "vue-loader";
+import {CleanWebpackPlugin} from "clean-webpack-plugin";
 import path from "path";
 
 export default {
@@ -40,6 +40,8 @@ export default {
       '@': path.resolve(__dirname, './src'),
     },
   },
-  devtool: "inline-source-map",
+  optimization: {
+    minimize: false, // 打包后，不进行代码压缩
+  },
   plugins: [new CleanWebpackPlugin(), new VueLoaderPlugin()],
 };

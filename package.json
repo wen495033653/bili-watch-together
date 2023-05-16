@@ -2,7 +2,8 @@
   "name": "bili-together",
   "version": "2.0",
   "scripts": {
-    "start": "webpack --watch"
+    "start": "webpack --config webpack.config.dev.ts --watch",
+    "build": "webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
